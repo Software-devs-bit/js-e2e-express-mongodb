@@ -22,8 +22,11 @@ steps:
   
 - task: Npm@1
   inputs:
-    command: 'ci'
-    customRegistry: 'useFeed'
+    command: 'install'
+    
+- task: npmAuthenticate@0
+  inputs:
+    workingFile: 
 
 - task: PublishBuildArtifacts@1
   inputs:
