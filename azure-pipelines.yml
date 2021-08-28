@@ -21,7 +21,11 @@ steps:
   inputs:
     command: 'install'
     
-
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
