@@ -21,19 +21,7 @@ steps:
   inputs:
     command: 'install'
     
-- task: DownloadBuildArtifacts@1
+- task: PublishPipelineArtifact@0
   inputs:
-    buildType: 'specific'
-    project: 'fed95144-1322-4ded-bd7a-57c94139d677'
-    pipeline: '16'
-    specificBuildWithTriggering: true
-    buildVersionToDownload: 'latest'
-    allowPartiallySucceededBuilds: true
-    downloadType: 'single'
-    downloadPath: '$(System.ArtifactsDirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    artifactName: 'webapp'
+    targetPath: 'C:'
