@@ -21,9 +21,7 @@ steps:
   inputs:
     command: 'install'
     
-- task: npmAuthenticate@0
-  inputs:
-    workingFile: 
+
 
 - task: PublishBuildArtifacts@1
   inputs:
