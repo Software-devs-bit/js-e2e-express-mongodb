@@ -24,4 +24,4 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'webapp'
-    targetPath: 'C:'
+    targetPath: '$(System.DefaultWorkingDirectory)'
