@@ -30,11 +30,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
     
-    
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'webapp'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
 
 - task: DownloadPipelineArtifact@2
   inputs:
