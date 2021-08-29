@@ -24,10 +24,11 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-- task: PublishPipelineArtifact@0
+- task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'drop'
-    targetPath: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
     
     
 - task: PublishPipelineArtifact@0
