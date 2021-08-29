@@ -28,7 +28,7 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'webapp'
-    targetPath: '$(System.DefaultWorkingDirectory)'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
 
 - task: DownloadPipelineArtifact@2
   inputs:
