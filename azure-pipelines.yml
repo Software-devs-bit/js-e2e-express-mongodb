@@ -23,7 +23,11 @@ steps:
   
 - task: Npm@1
   inputs:
-    command: 'install'
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'drop'
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    
     
 - task: PublishPipelineArtifact@0
   inputs:
