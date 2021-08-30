@@ -24,7 +24,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'install --production'
+    customCommand: 'npm install spawn-sync'
 
 - task: ArchiveFiles@2
   inputs:
