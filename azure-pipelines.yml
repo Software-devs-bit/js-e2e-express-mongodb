@@ -37,8 +37,3 @@ steps:
     publishLocation: 'Container'
     
 
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'current'
-    itemPattern: '''**/*.zip'''
-    targetPath: '$(Pipeline.Workspace)'
