@@ -21,7 +21,8 @@ steps:
   
 - task: Npm@1
   inputs:
-    command: 'install'
+    command: 'custom'
+    customCommand: 'node postinstall'
 
 - task: ArchiveFiles@2
   inputs:
