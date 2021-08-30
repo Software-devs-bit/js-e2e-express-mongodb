@@ -31,10 +31,10 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/js-e2e-express-mongodb$(Build.BuildId).zip'
     replaceExistingArchive: true
-- task: PublishBuildArtifacts@1
+
+- task: PublishPipelineArtifact@0
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'webapp'
-    publishLocation: 'Container'
+    artifactName: 'webapp'
+    targetPath: '$(System.DefaultWorkingDirectory)'
     
 
